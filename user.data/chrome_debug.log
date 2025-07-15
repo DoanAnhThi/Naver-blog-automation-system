@@ -1,8 +1,8 @@
-[37791:2646139:0714/141531.815485:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[37798:2646256:0714/141531.852772:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[37798:2646256:0714/141531.852928:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[37791:2646139:0714/141533.107712:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[37791:2646139:0714/141533.107734:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[37791:2646189:0714/141536.282493:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[37791:2646139:0714/141540.284681:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
-[37791:2646189:0714/141557.186157:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[30969:3316766:0715/105853.223429:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[30976:3316878:0715/105853.261388:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[30976:3316878:0715/105853.261550:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[30969:3316766:0715/105854.751298:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
+[30969:3316766:0715/105854.751328:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
+[30969:3316813:0715/105857.637179:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[30969:3316766:0715/105901.916591:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
+[30969:3316813:0715/105920.108008:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT

@@ -10,7 +10,27 @@ client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 MODEL = "gpt-4o"
 
-SEO_PROMPT = '''\nBạn là một chuyên gia viết blog chuẩn SEO. Hãy viết một bài blog tối ưu SEO với cấu trúc sau, dựa trên từ khóa: "{keyword}".\n\nYêu cầu:\n- Tiêu đề hấp dẫn, chứa từ khóa.\n- Mở bài (ít nhất 300 ký tự, chứa từ khóa tự nhiên).\n- Thân bài (ít nhất 300 ký tự, trình bày chi tiết, có thể chia ý rõ ràng, chứa từ khóa tự nhiên).\n- Kết luận (ít nhất 300 ký tự, tổng kết và kêu gọi hành động, chứa từ khóa tự nhiên).\n- Thẻ tag: 5 thẻ liên quan, phân tách bằng dấu phẩy.\n\nTrả về kết quả theo đúng định dạng JSON sau:\n{{\n  "title": "...",\n  "intro": "...",\n  "body": "...",\n  "conclusion": "...",\n  "tags": "..."\n}}\n'''
+SEO_PROMPT = '''
+Bạn là một chuyên gia viết blog chuẩn SEO. Hãy viết một bài blog tối ưu SEO với cấu trúc sau, dựa trên từ khóa: "{keyword}".
+
+Yêu cầu:
+- Tiêu đề hấp dẫn, chứa từ khóa.
+- Mở bài (ít nhất 300 ký tự, chứa từ khóa tự nhiên).
+- Thân bài (ít nhất 300 ký tự, trình bày chi tiết, có thể chia ý rõ ràng, chứa từ khóa tự nhiên).
+- Kết luận (ít nhất 300 ký tự, tổng kết và kêu gọi hành động, chứa từ khóa tự nhiên).
+- Thẻ tag: 5 thẻ liên quan, phân tách bằng dấu phẩy.
+
+**Chỉ trả về JSON thuần túy, không có giải thích, không có markdown, không có ký tự thừa.**
+Định dạng:
+{{
+  "title": "...",
+  "intro": "...",
+  "body": "...",
+  "conclusion": "...",
+  "tags": "..."
+}}
+'''
+
 
 def generate_blog_content(keyword: str) -> dict:
     prompt = SEO_PROMPT.format(keyword=keyword)
@@ -34,9 +54,9 @@ def generate_blog_content(keyword: str) -> dict:
         result = {"raw": content}
     return result
 
-if __name__ == "__main__":
-    keyword = input("Nhập từ khóa cho bài viết: ")
-    result = generate_blog_content(keyword)
-    print("\n--- Kết quả ---")
-    for k, v in result.items():
-        print(f"\n[{k.upper()}]\n{v}") 
+# if __name__ == "__main__":
+#     keyword = input("Nhập từ khóa cho bài viết: ")
+#     result = generate_blog_content(keyword)
+#     print("\n--- Kết quả ---")
+#     for k, v in result.items():
+#         print(f"\n[{k.upper()}]\n{v}") 
