@@ -60,7 +60,7 @@ def click_write_blog_button(driver):
 def fill_blog_title_and_content(driver, keyword):
     try:
         print('Chờ trang blog và iframe mainFrame xuất hiện...')
-        time.sleep(2)
+        time.sleep(5)
 
 
         # Nếu có nhiều tab, chuyển sang tab cuối cùng
@@ -120,14 +120,59 @@ def fill_blog_title_and_content(driver, keyword):
                 reply["title"],
                 reply["intro"],
                 reply["body"],
-                reply["conclusion"],
-                reply["tags"]
+                reply["conclusion"]
             ])
             ).perform()
 
         print('Đã nhập nội dung.')
 
-        driver.switch_to.default_content()
+        # KHÔNG switch_to.default_content() ở đây, vì mọi thứ đều nằm trong iframe
+        time.sleep(1)
+
+        # 1. Nhấn nút phát hành đầu tiên (sau khi nhập nội dung, vẫn trong iframe)
+        try:
+            first_publish_btn = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.publish_btn__m9KHH'))
+            )
+            first_publish_btn.click()
+            print('Đã nhấn nút phát hành đầu tiên (trong iframe).')
+        except Exception as e:
+            print('Không tìm thấy hoặc không thể click nút phát hành đầu tiên trong iframe:', e)
+            return
+
+        # 2. Đợi popup hiện ra, nhập tag (vẫn trong iframe)
+        try:
+            tag_input = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, 'input#tag-input, input.tag_input__rvUB5'))
+            )
+            tag_input.clear()
+            tag_input.send_keys(reply["tags"])
+            tag_input.send_keys(Keys.ENTER)
+            print('Đã nhập tag.')
+        except Exception as e:
+            print('Không tìm thấy hoặc không thể nhập tag:', e)
+            return
+
+        # 3. Trước khi nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe), tìm vùng blogTitleName để chuẩn bị hẹn giờ đăng
+        try:
+            blog_title_span = WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'span#blogTitleName'))
+            )
+            print('Đã tìm thấy vùng blogTitleName:', blog_title_span.text)
+        except Exception as e:
+            print('Không tìm thấy vùng blogTitleName:', e)
+
+        # # 4. Nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe)
+        # try:
+        #     final_publish_btn = WebDriverWait(driver, 10).until(
+        #         EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.confirm_btn__WEaBq[data-testid="seOnePublishBtn"], button.confirm_btn__WEaBq'))
+        #     )
+        #     final_publish_btn.click()
+        #     print('Đã nhấn nút phát hành (đăng bài) thành công!')
+        # except Exception as e:
+        #     print('Không tìm thấy hoặc không thể click nút phát hành:', e)
+        #     return
+
     except Exception as e:
         print('Không thể nhập tiêu đề hoặc nội dung:', e)
 
