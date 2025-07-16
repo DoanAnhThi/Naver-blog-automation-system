@@ -1,10 +1,9 @@
-[48366:4136861:0716/103946.083116:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[48375:4136966:0716/103946.120541:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[48375:4136966:0716/103946.120690:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[48366:4136861:0716/103948.911326:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[48366:4136861:0716/103948.911354:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[48366:4136905:0716/103950.165451:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[48366:4136861:0716/103950.239320:INFO:CONSOLE:0] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://ssl.pstatic.net/static/www/m-new/uit/webfont_NanumSquareNeo/NanumSquareNeoTTF-dEb.woff2", source: https://recoshopping.naver.com/ (0)
-[48366:4136861:0716/103956.058711:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
-[48366:4136905:0716/104016.769995:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[48366:4136905:0716/104101.983941:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[54415:4174015:0716/110032.466402:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[54422:4174125:0716/110032.507287:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[54422:4174125:0716/110032.507430:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[54415:4174015:0716/110033.645799:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
+[54415:4174015:0716/110033.645835:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
+[54415:4174065:0716/110037.765292:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[54415:4174015:0716/110040.823755:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
+[54415:4174065:0716/110103.636503:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[54415:4174065:0716/110148.432182:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT

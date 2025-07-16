@@ -153,25 +153,55 @@ def fill_blog_title_and_content(driver, keyword):
             print('Không tìm thấy hoặc không thể nhập tag:', e)
             return
 
-        # 3. Trước khi nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe), tìm vùng blogTitleName để chuẩn bị hẹn giờ đăng
+        # 3. Trước khi nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe), chuyển sang chế độ hẹn giờ và chọn thời gian đăng sau 30 phút
         try:
-            blog_title_span = WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'span#blogTitleName'))
+            # Nhấn vào nút 예약 (hẹn giờ)
+            schedule_radio = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'label[for="radio_time2"].radio_label__mB6ia'))
             )
-            print('Đã tìm thấy vùng blogTitleName:', blog_title_span.text)
-        except Exception as e:
-            print('Không tìm thấy vùng blogTitleName:', e)
+            schedule_radio.click()
+            print('Đã chọn chế độ 예약 (hẹn giờ).')
+            time.sleep(1)
 
-        # # 4. Nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe)
-        # try:
-        #     final_publish_btn = WebDriverWait(driver, 10).until(
-        #         EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.confirm_btn__WEaBq[data-testid="seOnePublishBtn"], button.confirm_btn__WEaBq'))
-        #     )
-        #     final_publish_btn.click()
-        #     print('Đã nhấn nút phát hành (đăng bài) thành công!')
-        # except Exception as e:
-        #     print('Không tìm thấy hoặc không thể click nút phát hành:', e)
-        #     return
+            # Tính toán thời gian đăng sau 30 phút
+            from datetime import datetime, timedelta
+            now = datetime.now()
+            future = now + timedelta(minutes=30)
+            hour_str = future.strftime('%H')
+            minute = future.minute
+            # Làm tròn xuống theo các option 00, 10, 20, 30, 40, 50
+            minute_rounded = (minute // 10) * 10
+            minute_str = f'{minute_rounded:02d}'
+
+            # Chọn giờ
+            hour_select = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'select.hour_option__J_heO'))
+            )
+            hour_select.click()
+            from selenium.webdriver.support.ui import Select
+            Select(hour_select).select_by_value(hour_str)
+            print(f'Đã chọn giờ: {hour_str}')
+
+            # Chọn phút
+            minute_select = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'select.minute_option__Vb3xB'))
+            )
+            minute_select.click()
+            Select(minute_select).select_by_value(minute_str)
+            print(f'Đã chọn phút: {minute_str}')
+        except Exception as e:
+            print('Không thể hẹn giờ đăng bài:', e)
+
+        # 4. Nhấn nút "발행" trên popup để đăng bài (vẫn trong iframe) - ĐANG TẮT CODE NÀY THEO YÊU CẦU
+        try:
+            final_publish_btn = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'button.confirm_btn__WEaBq[data-testid="seOnePublishBtn"], button.confirm_btn__WEaBq'))
+            )
+            final_publish_btn.click()
+            print('Đã nhấn nút phát hành (đăng bài) thành công!')
+        except Exception as e:
+            print('Không tìm thấy hoặc không thể click nút phát hành:', e)
+            return
 
     except Exception as e:
         print('Không thể nhập tiêu đề hoặc nội dung:', e)

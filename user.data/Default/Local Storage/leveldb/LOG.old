@@ -1,3 +1,15 @@
-2025/07/16-10:28:39.937 3ed587 Reusing MANIFEST /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Local Storage/leveldb/MANIFEST-000001
-2025/07/16-10:28:39.939 3ed587 Recovering log #16
-2025/07/16-10:28:39.939 3ed587 Reusing old log /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Local Storage/leveldb/000016.log 
+2025/07/16-10:57:17.848 3f9af5 Reusing MANIFEST /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Local Storage/leveldb/MANIFEST-000001
+2025/07/16-10:57:17.850 3f9af5 Recovering log #16
+2025/07/16-10:57:17.850 3f9af5 Reusing old log /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Local Storage/leveldb/000016.log 
+2025/07/16-10:57:32.841 3f9af7 Level-0 table #20: started
+2025/07/16-10:57:32.847 3f9af7 Level-0 table #20: 11069 bytes OK
+2025/07/16-10:57:32.852 3f9af7 Delete type=0 #16
+2025/07/16-10:57:32.855 3f9af7 Compacting 4@0 + 1@1 files
+2025/07/16-10:57:32.857 3f9af7 Generated table #21@0: 24 keys, 1873 bytes
+2025/07/16-10:57:32.857 3f9af7 Compacted 4@0 + 1@1 files => 1873 bytes
+2025/07/16-10:57:32.859 3f9af7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/16-10:57:32.859 3f9af7 Delete type=2 #14
+2025/07/16-10:57:32.859 3f9af7 Delete type=2 #17
+2025/07/16-10:57:32.860 3f9af7 Delete type=2 #11
+2025/07/16-10:57:32.860 3f9af7 Delete type=2 #8
+2025/07/16-10:57:32.860 3f9af7 Delete type=2 #20

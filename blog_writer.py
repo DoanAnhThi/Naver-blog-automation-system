@@ -14,6 +14,7 @@ SEO_PROMPT = '''
 Bạn là một chuyên gia viết blog chuẩn SEO. Hãy viết một bài blog tối ưu SEO với cấu trúc sau, dựa trên từ khóa: "{keyword}".
 
 Yêu cầu:
+- Tất cả viết bằng tiếng Hàn
 - Tiêu đề hấp dẫn, chứa từ khóa.
 - Mở bài (ít nhất 300 ký tự, chứa từ khóa tự nhiên).
 - Thân bài (ít nhất 300 ký tự, trình bày chi tiết, có thể chia ý rõ ràng, chứa từ khóa tự nhiên).
@@ -53,10 +54,3 @@ def generate_blog_content(keyword: str) -> dict:
         # Nếu không phải JSON chuẩn, trả về raw
         result = {"raw": content}
     return result
-
-# if __name__ == "__main__":
-#     keyword = input("Nhập từ khóa cho bài viết: ")
-#     result = generate_blog_content(keyword)
-#     print("\n--- Kết quả ---")
-#     for k, v in result.items():
-#         print(f"\n[{k.upper()}]\n{v}") 
