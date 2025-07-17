@@ -1,3 +1,6 @@
-2025/07/16-10:57:17.919 3f9af5 Reusing MANIFEST /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Session Storage/MANIFEST-000001
-2025/07/16-10:57:17.920 3f9af5 Recovering log #7
-2025/07/16-10:57:17.920 3f9af5 Reusing old log /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Session Storage/000007.log 
+2025/07/16-11:47:47.704 404b02 Reusing MANIFEST /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Session Storage/MANIFEST-000001
+2025/07/16-11:47:47.706 404b02 Recovering log #7
+2025/07/16-11:47:47.708 404b02 Reusing old log /Users/MAC/Documents/Brothers Company/2. Product/Naver blog Automation/user.data/Default/Session Storage/000007.log 
+2025/07/16-11:47:48.582 404b06 Level-0 table #11: started
+2025/07/16-11:47:48.586 404b06 Level-0 table #11: 10952 bytes OK
+2025/07/16-11:47:48.589 404b06 Delete type=0 #7
