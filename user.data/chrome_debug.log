@@ -1,9 +1,9 @@
-[80001:4375938:0716/154149.093946:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[80010:4376051:0716/154149.128630:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[80010:4376051:0716/154149.128762:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
-[80001:4375938:0716/154150.991524:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[80001:4375938:0716/154150.991551:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.e08b210f.js?o=www (2)
-[80001:4376006:0716/154153.802964:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[80001:4375938:0716/154158.182187:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
-[80001:4376006:0716/154223.241497:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[80001:4376006:0716/154314.540018:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[60078:21962515:0728/173240.518038:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[60090:21962621:0728/173240.557208:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[60090:21962621:0728/173240.557404:WARNING:net/dns/address_sorter_posix.cc:461] FromSockAddr failed on netmask
+[60078:21962515:0728/173242.288020:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.a86c23dc.js?o=www (2)
+[60078:21962515:0728/173242.288045:INFO:CONSOLE:2] "Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com').", source: https://pm.pstatic.net/resources/js/main.a86c23dc.js?o=www (2)
+[60078:21962576:0728/173245.088680:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[60078:21962515:0728/173249.490235:INFO:CONSOLE:447] "'g_pid / lcs_get_lpid' is not exist.", source: https://ssl.pstatic.net/t.static.blog/section/versioning/NgAppBundle2-1246892042_https.js (447)
+[60090:21962618:0728/173255.394660:WARNING:net/extras/sqlite/sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[60090:21962618:0728/173255.394847:WARNING:net/extras/sqlite/sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
